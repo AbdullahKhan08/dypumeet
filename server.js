@@ -4,11 +4,13 @@ var app = express()
 var server = app.listen(3001, function () {
   console.log('Listening on port 3000')
 })
+const dotenv = require('dotenv')
 const fs = require('fs')
 const fileUpload = require('express-fileupload')
 const io = require('socket.io')(server, {
   allowEIO3: true, // false by default
 })
+dotenv.config()
 app.use(express.static(path.join(__dirname, '')))
 var userConnections = []
 io.on('connection', (socket) => {

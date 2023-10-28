@@ -27,8 +27,25 @@
             MyApp._init(user_id,meeting_id);
         })
     </script>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+            // The "Enter" key was pressed
+            var msgbox = document.getElementById('msgbox');
+            var message = msgbox.value;
+            
+            // Add your code here to handle the event
+            // For example, you can send the message to a chat server
+            // or process it in any way you need.
+            
+            // Clear the input field after sending
+            msgbox.value = '';
+        }
+    });
+</script>
 </head>
-<body>
+<body style="background-color:  rgb(31, 30, 30);;">
     <main class=" d-flex flex-column home-wrap">
         <div class="g-top text-light">
             <div class="top-remote-video-show-wrap d-flex">
@@ -192,13 +209,12 @@
                 <div class="handRaiseAction display-center cursor-pointer" id="handRaiseAction" style="margin-left: 5px;"><Img src="/public/Assets/images/handRaiseBlack.png" style="height: 30px;width: 30px;" /></div>
                 <!-- .....................HandRaise .................-->   
             </div>
-            <div class="bottom-right d-flex just-content-center align-items-center mr-3" id="screenShare-wrap" style="height: 10vh;">
+            <div class="bottom-right d-flex just-content-center align-items-center mr-1" id="screenShare-wrap" style="height: 10vh;">
                 <div class="present-now-wrap d-flex just-content-center flex-column align-items-center mr-5 cursor-pointer" id="ScreenShareOnOf">
                     <span class="material-icons">present_to_all</span>
                     <div>Present Now</div>
-                </div>
-                
-                <div class="option-wrap cursor-pointer display-center" style="height: 10vh; position:relative;">
+                </div>               
+                 <div class="option-wrap cursor-pointer display-center" style="height: 10vh; position:relative;">
                     <div class="recording-show">
                         <button class="btn btn-dark text-danger start-record">Start Recording</button>
                     </div>
