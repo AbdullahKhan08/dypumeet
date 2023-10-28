@@ -1,7 +1,8 @@
 const express = require('express')
 const path = require('path')
 var app = express()
-var server = app.listen(3001, function () {
+const PORT = process.env.PORT || 3001
+var server = app.listen(PORT, function () {
   console.log('Listening on port 3000')
 })
 const dotenv = require('dotenv')
