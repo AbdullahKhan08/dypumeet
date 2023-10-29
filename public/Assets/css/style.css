@@ -12,7 +12,7 @@ ul {
   padding: 0;
 }
 .logo {
-  height: 100px;
+  height: 85px;
   padding-right: 10px;
 }
 .navbar-brand {
@@ -21,10 +21,10 @@ ul {
   font-family: 'Lato';
 }
 .nav-item a {
-  color: #000000;
+  color: #2d2d2d !important;
   font-size: 22px;
   padding: 0 10px;
-  font-weight: 600;
+  font-weight: bold;
 }
 .display-center {
   display: flex;
@@ -42,7 +42,7 @@ li.nav-item {
 }
 
 li.nav-item a:hover {
-  color: #660819;
+  color: #660819 !important;
 }
 textarea:focus,
 input:focus {
@@ -189,44 +189,15 @@ video {
 
 /* repsonsive changes code  */
 
-@media (max-width: 576px) {
-  /* CSS for screens smaller than or equal to 576px (e.g., smartphones) */
-  body {
-    padding-top: 2rem; /* Adjust padding for smaller screens */
-  }
-  .video-wrap {
-    height: 600px;
-    margin-bottom: 3rem;
-  }
-  .navbar {
-    padding-top: 1rem; /* Adjust navbar padding */
-  }
-
-  .jumbotron {
-    flex-direction: row; /* Stack elements vertically */
-  }
-  .g-top {
-    height: 89vh;
-    position: relative;
-  }
-  .container {
-    width: 100%; /* Make containers full width */
-  }
-
-  .w-50 {
-    width: 100%; /* Make containers full width */
-    max-width: none; /* Override max-width */
-  }
-}
-
-/* Add your existing CSS code here */
-
 /* Media Query for Mobile Devices (less than or equal to 576px) */
-@media (max-width: 576px) {
+@media (max-width: 750px) {
   body {
     font-size: 14px; /* Adjust font size for small screens */
   }
-
+  .resp-class {
+    /* padding-top: 1rem; */
+    padding-left: 1rem !important;
+  }
   .home-wrap {
     padding: 10px; /* Add some padding for content on small screens */
     height: 100%;
@@ -242,7 +213,62 @@ video {
     border-radius: 5px;
     padding: 5px;
   }
+  .signin-image {
+    height: 270px;
+    width: 270px;
+  }
+  .g-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Add your desired background color */
+    /* z-index: 999; Ensure it's on top of other elements */
+    margin-top: 20px;
+  }
+}
 
+@media (max-width: 819px) {
+  body {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .home-wrap {
+    padding: 10px; /* Add some padding for content on small screens */
+    height: 100%;
+    width: 100%;
+  }
+
+  .resp-image {
+    justify-content: center;
+  }
+
+  .mleft {
+    margin-left: 1rem;
+  }
+
+  .resp-class {
+    /* padding-top: 1rem; */
+    padding-left: 1rem !important;
+  }
+  .g-details {
+    position: absolute;
+    width: 80vw;
+    background-color: white;
+    margin-top: -135px;
+    counter-reset: black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .signin-image {
+    margin-top: 2rem;
+    height: 220px;
+    width: 220px;
+  }
   .g-bottom {
     position: fixed;
     bottom: 0;
@@ -253,9 +279,55 @@ video {
     margin-top: 20px;
   }
 
-  .top-remote-video-show-wrap,
-  .g-right-details-wrap,
-  .g-top-left {
-    margin: 10px 0; /* Add some margin for these sections */
+  .container {
+    width: 100% !important; /* Make containers full width*/
+  }
+  .w-50 {
+    width: 100% !important;
+    /* max-width: none !important; */
+  }
+}
+
+@media (max-width: 1146px) {
+  .signin-image {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 766px) {
+  .mtop {
+    margin-top: 1rem !important;
+  }
+
+  .mbottom {
+    margin-bottom: 1rem;
+  }
+
+  .mleft {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .mtop {
+    margin-top: 1rem !important;
+  }
+}
+@media (max-width: 920px) {
+  .mtop {
+    margin-top: 1rem !important;
+  }
+}
+
+@media (max-width: 1171px) {
+  .resp-class {
+    /* padding-top: 1rem; */
+    padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 820px) {
+  .mleft {
+    margin-left: 1rem;
   }
 }

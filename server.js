@@ -3,7 +3,7 @@ const path = require('path')
 var app = express()
 const PORT = process.env.PORT || 3001
 var server = app.listen(PORT, function () {
-  console.log('Listening on port 3000')
+  console.log('Listening on port ' + PORT)
 })
 const dotenv = require('dotenv')
 const fs = require('fs')

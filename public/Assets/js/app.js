@@ -7,7 +7,6 @@ var AppProcess = (function () {
   var serverProcess
   var audio
   var isAudioMute = true
-  var rtp_aud_senders = []
   var video_states = {
     None: 0,
     Camera: 1,
@@ -15,6 +14,7 @@ var AppProcess = (function () {
   }
   var video_st = video_states.None
   var videoCamTrack
+  var rtp_aud_senders = []
   var rtp_vid_senders = []
   async function _init(SDP_function, my_connid) {
     serverProcess = SDP_function
@@ -415,7 +415,7 @@ var MyApp = (function () {
       var attachFileAreaForOther = document.querySelector('.show-attach-file')
 
       attachFileAreaForOther.innerHTML +=
-        "<div class='left-align' style='display:flex; align-items:center;'><img src='public/assets/images/other.jpg' style='height:40px;width:40px;' class='caller-image circle'><div style='font-weight:600;margin:0 5px;'>" +
+        "<div class='left-align' style='display:flex; align-items:center;'><img src='public/Assets/images/other.jpg' style='height:40px;width:40px;' class='caller-image circle'><div style='font-weight:600;margin:0 5px;'>" +
         data.username +
         "</div>:<div><a style='color:#007bff;' href='" +
         data.filePath +
@@ -577,7 +577,7 @@ var MyApp = (function () {
         display: 'block',
       })
       .html(
-        '<div class="top-box align-vertical-middle profile-dialogue-show"> <h4 class="mt-3" style="text-align:center;color:white;">Leave Meeting</h4> <hr> <div class="call-leave-cancel-action d-flex justify-content-center align-items-center w-100"> <a href="/action.html"><button class="call-leave-action btn btn-danger mr-5">Leave</button></a> <button class="call-cancel-action btn btn-secondary">Cancel</button> </div> </div>'
+        '<div class="top-box align-vertical-middle profile-dialogue-show"> <h4 class="mt-3" style="text-align:center;color:white;">Leave Meeting</h4> <hr> <div class="call-leave-cancel-action d-flex justify-content-center align-items-center w-100"> <a href="/"><button class="call-leave-action btn btn-danger mr-5">Leave</button></a> <button class="call-cancel-action btn btn-secondary">Cancel</button> </div> </div>'
       )
   })
   $(document).mouseup(function (e) {
@@ -662,7 +662,7 @@ var MyApp = (function () {
     var attachFilePath =
       'public/attachment/' + meeting_id + '/' + attachFileName
     attachFileArea.innerHTML +=
-      "<div class='left-align' style='display:flex; align-items:center;'><img src='public/assets/images/other.jpg' style='height:40px;width:40px;' class='caller-image circle'><div style='font-weight:600;margin:0 5px;'>" +
+      "<div class='left-align' style='display:flex; align-items:center;'><img src='public/Assets/images/other.jpg' style='height:40px;width:40px;' class='caller-image circle'><div style='font-weight:600;margin:0 5px;'>" +
       user_id +
       "</div>:<div><a style='color:#007bff;' href='" +
       attachFilePath +
