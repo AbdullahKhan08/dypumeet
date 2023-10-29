@@ -44,7 +44,7 @@ var AppProcess = (function () {
           "<span class='material-icons' style='width:100%;'>mic_off</span>"
         )
         removeMediaSenders(rtp_aud_senders)
-        audio.stop()
+        // audio.stop()
         console.log(rtp_aud_senders)
       }
       isAudioMute = !isAudioMute
